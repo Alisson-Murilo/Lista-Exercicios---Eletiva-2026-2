@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class ExerciciosController extends Controller
 {
+    /*----------------------------------------------
+    ---               EXERCÍCIO 01               ---
+    ----------------------------------------------*/
+
     public function abrirFormExer1(){
         return view('exer1');
     }
@@ -15,5 +19,20 @@ class ExerciciosController extends Controller
         $valor2 = $request->valor2;
         $soma = $valor1 + $valor2;
         return view('exer1', ['soma' => $soma]);
+    }
+
+    /*----------------------------------------------
+    ---               EXERCÍCIO 02               ---
+    ----------------------------------------------*/
+
+    public function abrirFormExer2(){
+        return view('exer2');
+    }
+
+    public function respostaExer2(Request $request){
+        $valor1 = $request->valor1;
+        $valor2 = $request->valor2;
+        $subtr = $valor1 - $valor2;
+        return view('exer2', ['subtr' => $subtr]);
     }
 }
