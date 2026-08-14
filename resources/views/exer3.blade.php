@@ -1,5 +1,5 @@
 @extends('layout')
-@section('titulo', 'exercicio2')
+@section('titulo', 'exercicio3')
 @section('conteudo')
 
         <h1>Exercicio 3</h1>

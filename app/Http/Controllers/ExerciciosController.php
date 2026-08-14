@@ -52,7 +52,7 @@ class ExerciciosController extends Controller
     }
 
     /*----------------------------------------------
-    ---               EXERCÍCIO 03               ---
+    ---               EXERCÍCIO 04               ---
     ----------------------------------------------*/
 
     public function abrirFormExer4(){
@@ -64,5 +64,21 @@ class ExerciciosController extends Controller
         $valor2 = $request->valor2;
         $div = $valor1 / $valor2;
         return view('exer4', ['div' =>$div]);
+    }
+
+    /*----------------------------------------------
+    ---               EXERCÍCIO 05               ---
+    ----------------------------------------------*/
+
+    public function abrirFormExer5(){
+        return view('exer5');
+    }
+
+    public function respostaExer5(Request $request){
+        $nota1 = $request->nota1;
+        $nota2 = $request->nota2;
+        $nota3 = $request->nota3;
+        $media = ($nota1 + $nota2 + $nota3) / 3;
+        return view('exer5', ['media' => $media]);
     }
 }
