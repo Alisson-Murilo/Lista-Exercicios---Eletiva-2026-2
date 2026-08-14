@@ -35,4 +35,19 @@ class ExerciciosController extends Controller
         $subtr = $valor1 - $valor2;
         return view('exer2', ['subtr' => $subtr]);
     }
+
+    /*----------------------------------------------
+    ---               EXERCÍCIO 02               ---
+    ----------------------------------------------*/
+
+    public function abrirFormExer3(){
+        return view('exer3');
+    }
+
+    public function respostaExer3(Request $request){
+        $valor1 = $request->valor1;
+        $valor2 = $request->valor2;
+        $mult = $valor1 * $valor2;
+        return view('exer3', ['mult' => $mult]);
+    }
 }
