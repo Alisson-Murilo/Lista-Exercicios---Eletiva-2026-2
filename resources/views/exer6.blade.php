@@ -7,6 +7,7 @@
             <div class="mb-3">
                 <label for="tempC" class="form-label">Digite a temperatura em Celcius: </label>
                 <input type="number" id="tempC" name="tempC" class="form-control" required="">
+            </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
      
