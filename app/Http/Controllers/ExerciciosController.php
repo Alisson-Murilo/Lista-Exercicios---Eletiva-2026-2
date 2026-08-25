@@ -81,4 +81,18 @@ class ExerciciosController extends Controller
         $media = ($nota1 + $nota2 + $nota3) / 3;
         return view('exer5', ['media' => $media]);
     }
+
+    /*----------------------------------------------
+    ---               EXERCÍCIO 06               ---
+    ----------------------------------------------*/
+
+    public function abrirFormExer6(){
+        return view('exer6');
+    }
+    
+    public function respostaExer6(Request $request){
+        $tempC = $request->tempC;
+        $tempF = $tempC * 1.8 + 32;
+        return view('exer6', ['tempF' => $tempF]); 
+    }
 }
