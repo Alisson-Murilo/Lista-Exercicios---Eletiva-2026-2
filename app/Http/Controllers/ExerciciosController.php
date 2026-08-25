@@ -196,5 +196,19 @@ class ExerciciosController extends Controller
         $valorCm = $metros * 100;
         return view('exer13', ['valorCm' => $valorCm]);
     }
+
+    /*----------------------------------------------
+    ---               EXERCÍCIO 14               ---
+    ----------------------------------------------*/
+
+    public function abrirFormExer14(){
+        return view('exer14');
+    }
+
+    public function respostaExer14(Request $request){
+        $km = $request->km;
+        $valorM = $km * 0.621371;
+        return view('exer14', ['valorM' => $valorM]);
+    }
 }
 
