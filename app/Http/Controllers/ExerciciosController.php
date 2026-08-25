@@ -167,5 +167,20 @@ class ExerciciosController extends Controller
         $perimetro = 2 * pi() * $raio;
         return view('exer11', ['perimetro' => $perimetro]); 
     }
+
+    /*----------------------------------------------
+    ---               EXERCÍCIO 12               ---
+    ----------------------------------------------*/
+
+    public function abrirFormExer12(){
+        return view('exer12');
+    }
+    
+    public function respostaExer12(Request $request){
+        $base = $request->base;
+        $expoente = $request->expoente;
+        $potencia = $base ** $expoente;
+        return view('exer12', ['potencia' => $potencia]); 
+    }
 }
 
