@@ -182,5 +182,19 @@ class ExerciciosController extends Controller
         $potencia = $base ** $expoente;
         return view('exer12', ['potencia' => $potencia]); 
     }
+
+    /*----------------------------------------------
+    ---               EXERCÍCIO 13               ---
+    ----------------------------------------------*/
+
+    public function abrirFormExer13(){
+        return view('exer13');
+    }
+
+    public function respostaExer13(Request $request){
+        $metros = $request->metros;
+        $valorCm = $metros * 100;
+        return view('exer13', ['valorCm' => $valorCm]);
+    }
 }
 
