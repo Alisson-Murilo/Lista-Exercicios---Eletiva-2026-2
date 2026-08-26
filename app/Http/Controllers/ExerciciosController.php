@@ -225,5 +225,20 @@ class ExerciciosController extends Controller
         $imc = $peso / ($altura ** 2);
         return view('exer15', ['imc' => $imc]);
     }
+
+    /*----------------------------------------------
+    ---               EXERCÍCIO 16               ---
+    ----------------------------------------------*/
+
+    public function abrirFormExer16(){
+        return view('exer16');
+    }
+
+    public function respostaExer16(Request $request){
+        $preco = $request->preco;
+        $desc = $request->desc;
+        $novoPreco = $preco - ($preco * ($desc / 100));
+        return view('exer16', ['novoPreco' => $novoPreco]);
+    }
 }
 
