@@ -240,5 +240,21 @@ class ExerciciosController extends Controller
         $novoPreco = $preco - ($preco * ($desc / 100));
         return view('exer16', ['novoPreco' => $novoPreco]);
     }
+
+    /*----------------------------------------------
+    ---               EXERCÍCIO 17               ---
+    ----------------------------------------------*/
+
+    public function abrirFormExer17(){
+        return view('exer17');
+    }
+
+    public function respostaExer17(Request $request){
+        $capital = $request->capital;
+        $taxa = $request->taxa;
+        $periodo = $request->periodo;
+        $juros = ($capital * ($taxa / 100) * $periodo);
+        return view('exer17', ['juros' => $juros]);
+    }
 }
 
